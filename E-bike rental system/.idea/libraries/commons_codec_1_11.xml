@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="commons-codec-1.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jcalendar-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcalendar-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drivers>
+	<provider id="db2"/>
+	<provider id="exasol"/>
+	<provider id="generic"/>
+	<provider id="mssql"/>
+	<provider id="mysql">
+		<driver id="mysql5" custom="false" embedded="false" name="MySQL" class="com.mysql.jdbc.Driver" url="jdbc:mysql://{host}[:{port}]/[{database}]" port="3306" description="MySQL standard driver">
+			<library type="jar" path="maven:/mysql:mysql-connector-java:RELEASE" custom="false" version="5.1.44">
+				<file id="mysql:mysql-connector-java" version="5.1.44" path="${home}\.dbeaver-drivers\maven\maven-central\mysql\mysql-connector-java-5.1.44.jar"/>
+			</library>
+		</driver>
+	</provider>
+	<provider id="oracle"/>
+	<provider id="postgresql"/>
+	<provider id="vertica"/>
+</drivers>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="E-bike rental system/src"/>
+	<classpathentry kind="lib" path="E-bike rental system/lib/c3p0-0.9.5.2.jar"/>
+	<classpathentry kind="lib" path="E-bike rental system/lib/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="E-bike rental system/lib/mchange-commons-java-0.2.11.jar"/>
+	<classpathentry kind="lib" path="E-bike rental system/lib/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="lib" path="jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Aria/Documents/DEL 1/Team15ProjectAssigment/Project code/E-bike rental system/lib/JMapViewer.jar"/>
+	<classpathentry kind="output" path="E-bike rental system/bin"/>
+</classpath>

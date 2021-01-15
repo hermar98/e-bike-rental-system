@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="hermanrm@mysql.stud.iie.ntnu.no" uuid="ec146b90-e70f-458a-8817-c2c3679e7e99">
+      <database-info product="MySQL" version="5.7.21-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>hermanrm</user-name>
+      <introspection-schemas>*:hermanrm</introspection-schemas>
+    </data-source>
+    <data-source name="trondjro@mysql.stud.iie.ntnu.no" uuid="91e2cc3f-d0d1-4f6a-bed2-95ea7981b887">
+      <database-info product="MySQL" version="5.7.21-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>trondjro</user-name>
+      <introspection-schemas>*:trondjro</introspection-schemas>
+    </data-source>
+  </component>
+</project>

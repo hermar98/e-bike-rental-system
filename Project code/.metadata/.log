@@ -1,0 +1,345 @@
+!SESSION 2018-04-23 19:08:22.493 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=no_NO
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2018-04-23 19:08:29.164
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-23 19:08:29.164
+!MESSAGE A conflict occurred for CTRL+SHIFT+V:
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.command.OpenFromClipboard,Open from Clipboard,
+		Opens a Java element or a Java stack trace from clipboard,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1be427b4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.edit.paste.special,Advanced Paste,
+		Paste with extra settings,
+		Category(org.jkiss.dbeaver.core.util,Utility,Utility Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@470a446f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-23 19:08:29.164
+!MESSAGE A conflict occurred for CTRL+SHIFT+A:
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.eclipse.pde.ui.openPluginArtifact,Open Plug-in Artifact,
+		Open a plug-in artifact in the manifest editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@55315a00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.navigator.set.active,Set active object,
+		Set active object,
+		Category(org.jkiss.dbeaver.core.navigator,Database Navigator,Database Navigator Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4942e6af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-23 19:08:37.407
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\marti'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-04-23 20:59:21.764 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=no_NO
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2018-04-23 20:59:29.544
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-23 20:59:29.544
+!MESSAGE A conflict occurred for CTRL+SHIFT+V:
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.command.OpenFromClipboard,Open from Clipboard,
+		Opens a Java element or a Java stack trace from clipboard,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2cc9a948,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.edit.paste.special,Advanced Paste,
+		Paste with extra settings,
+		Category(org.jkiss.dbeaver.core.util,Utility,Utility Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f2a1ff0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-23 20:59:29.544
+!MESSAGE A conflict occurred for CTRL+SHIFT+A:
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.eclipse.pde.ui.openPluginArtifact,Open Plug-in Artifact,
+		Open a plug-in artifact in the manifest editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@647ce968,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.navigator.set.active,Set active object,
+		Set active object,
+		Category(org.jkiss.dbeaver.core.navigator,Database Navigator,Database Navigator Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a2b3aff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-23 20:59:40.140
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\marti'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.workbench 4 0 2018-04-23 21:01:02.282
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Decorations.getText(Decorations.java:760)
+	at org.eclipse.ui.internal.WorkbenchWindowConfigurer.getTitle(WorkbenchWindowConfigurer.java:268)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.recomputeTitle(IDEWorkbenchWindowAdvisor.java:432)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.access$2(IDEWorkbenchWindowAdvisor.java:430)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor$1.propertyChanged(IDEWorkbenchWindowAdvisor.java:113)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:119)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.firePropertyChange(AbstractTextEditor.java:6345)
+	at org.eclipse.ui.part.WorkbenchPart.setTitle(WorkbenchPart.java:285)
+	at org.eclipse.ui.part.EditorPart.setDefaultTitle(EditorPart.java:285)
+	at org.eclipse.ui.part.WorkbenchPart.setPartName(WorkbenchPart.java:365)
+	at org.eclipse.ui.part.EditorPart.setPartName(EditorPart.java:260)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor.setDataSourceContainer(SQLEditor.java:250)
+	at org.jkiss.dbeaver.ui.perspective.DataSourceManagementToolbar$7.run(DataSourceManagementToolbar.java:637)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:95)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:17.183
+!MESSAGE Error getting transaction isolation level
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:17.183
+!MESSAGE Communications link failure
+
+The last packet successfully received from the server was 289 414 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+!STACK 0
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 289 414 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3559)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1381)
+	at com.mysql.jdbc.ConnectionImpl.getTransactionIsolation(ConnectionImpl.java:3008)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext$1.run(JDBCExecutionContext.java:253)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$MonitoringTask.run(RuntimeUtils.java:261)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$1.run(RuntimeUtils.java:207)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:95)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	... 13 more
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:17.183
+!MESSAGE Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+!STACK 0
+java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1381)
+	at com.mysql.jdbc.ConnectionImpl.getTransactionIsolation(ConnectionImpl.java:3008)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext$1.run(JDBCExecutionContext.java:253)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$MonitoringTask.run(RuntimeUtils.java:261)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$1.run(RuntimeUtils.java:207)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:95)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:57.003
+!MESSAGE SQL Error [08003]: No operations allowed after connection closed.
+!STACK 0
+org.jkiss.dbeaver.DBException: SQL Error [08003]: No operations allowed after connection closed.
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1513)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:91)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:95)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.jkiss.dbeaver.model.exec.DBCException: SQL Error [08003]: No operations allowed after connection closed.
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:819)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:1981)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:93)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1485)
+	... 3 more
+Caused by: org.jkiss.dbeaver.DBException: SQL Error [08003]: No operations allowed after connection closed.
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1513)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:384)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.extractData(SQLQueryJob.java:814)
+	... 6 more
+Caused by: org.jkiss.dbeaver.model.impl.jdbc.JDBCException: SQL Error [08003]: No operations allowed after connection closed.
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCConnectionImpl.prepareStatement(JDBCConnectionImpl.java:189)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCConnectionImpl.prepareStatement(JDBCConnectionImpl.java:1)
+	at org.jkiss.dbeaver.model.DBUtils.createStatement(DBUtils.java:996)
+	at org.jkiss.dbeaver.model.DBUtils.makeStatement(DBUtils.java:967)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.executeStatement(SQLQueryJob.java:422)
+	at org.jkiss.dbeaver.runtime.sql.SQLQueryJob.lambda$0(SQLQueryJob.java:386)
+	at org.jkiss.dbeaver.model.DBUtils.tryExecuteRecover(DBUtils.java:1485)
+	... 8 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCConnectionImpl.prepareStatement(JDBCConnectionImpl.java:225)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCConnectionImpl.prepareStatement(JDBCConnectionImpl.java:143)
+	... 14 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 289 414 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3559)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1381)
+	at com.mysql.jdbc.ConnectionImpl.getTransactionIsolation(ConnectionImpl.java:3008)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext$1.run(JDBCExecutionContext.java:253)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$MonitoringTask.run(RuntimeUtils.java:261)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$1.run(RuntimeUtils.java:207)
+	... 2 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	... 13 more
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:57.004
+!MESSAGE SQL Error [08003]: No operations allowed after connection closed.
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:57.004
+!MESSAGE SQL Error [08003]: No operations allowed after connection closed.
+!SUBENTRY 3 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:57.004
+!MESSAGE SQL Error [08003]: No operations allowed after connection closed.
+!SUBENTRY 4 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:57.004
+!MESSAGE No operations allowed after connection closed.
+!SUBENTRY 5 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:57.004
+!MESSAGE Communications link failure
+
+The last packet successfully received from the server was 289 414 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+!SUBENTRY 6 org.jkiss.dbeaver.model 4 0 2018-04-23 21:06:57.004
+!MESSAGE Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+!STACK 0
+java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3469)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3459)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3900)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2483)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2441)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1381)
+	at com.mysql.jdbc.ConnectionImpl.getTransactionIsolation(ConnectionImpl.java:3008)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext$1.run(JDBCExecutionContext.java:253)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$MonitoringTask.run(RuntimeUtils.java:261)
+	at org.jkiss.dbeaver.utils.RuntimeUtils$1.run(RuntimeUtils.java:207)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:95)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.jkiss.dbeaver.model 1 0 2018-04-23 21:07:02.136
+!MESSAGE Connections reopened: 2 (of 2)
+!SESSION 2018-04-24 11:17:11.408 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=no_NO
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2018-04-24 11:17:36.014
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-24 11:17:36.014
+!MESSAGE A conflict occurred for CTRL+SHIFT+V:
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.command.OpenFromClipboard,Open from Clipboard,
+		Opens a Java element or a Java stack trace from clipboard,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c6a6ce3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.edit.paste.special,Advanced Paste,
+		Paste with extra settings,
+		Category(org.jkiss.dbeaver.core.util,Utility,Utility Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@726a5e6a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-24 11:17:36.014
+!MESSAGE A conflict occurred for CTRL+SHIFT+A:
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.eclipse.pde.ui.openPluginArtifact,Open Plug-in Artifact,
+		Open a plug-in artifact in the manifest editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e3a6c83,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+A,
+	ParameterizedCommand(Command(org.jkiss.dbeaver.core.navigator.set.active,Set active object,
+		Set active object,
+		Category(org.jkiss.dbeaver.core.navigator,Database Navigator,Database Navigator Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b889cb6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-24 11:18:15.679
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\marti'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

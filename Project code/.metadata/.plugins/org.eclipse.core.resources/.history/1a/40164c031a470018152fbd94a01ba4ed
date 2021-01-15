@@ -1,0 +1,386 @@
+package main.java.com.team15.ebrs.view;
+
+import java.awt.*;
+
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.DefaultListCellRenderer;
+import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import javax.swing.ListSelectionModel;
+
+import main.java.com.team15.ebrs.dao.BikeDAO;
+import main.java.com.team15.ebrs.dao.DockingStationDAO;
+import main.java.com.team15.ebrs.data.Bike;
+import main.java.com.team15.ebrs.data.DockingStation;
+import main.java.com.team15.ebrs.util.Map;
+
+import javax.swing.JScrollPane;
+import javax.swing.JPanel;
+
+import org.openstreetmap.gui.jmapviewer.JMapViewer;
+
+/**
+ * AddBikePanel is a container class with frame with the specified layout for informations of all the available docking stations
+ *
+ * @author Team 15
+ */
+public class StationPanel extends JPanel {
+
+    private DockingStationDAO dsDAO = new DockingStationDAO();
+    private BikeDAO bikeDAO = new BikeDAO();
+    private ArrayList<DockingStation> deList;
+    private DefaultListModel dsListModel = new DefaultListModel();
+    private ArrayList<Bike> bikeList;
+    private DefaultListModel bikeListModel = new DefaultListModel();
+
+    private JFrame mainFrame;
+    private JPanel mapPanel;
+    private JLabel stationInfo;
+    private JList dbJList;
+    private JList bikeJList;
+    private JScrollPane dbScrollPane;
+    private JScrollPane bikeScrollPane;
+    private JButton btnBack;
+    private JButton btnAdd;
+    private JButton btnEdit;
+    private JButton btnDelete;
+
+    /**
+     * Create the application.
+     */
+    public StationPanel(JFrame frame) {
+        mainFrame = frame;
+        initialize();
+    }
+
+    /**
+     * Initialize the contents of the frame.
+     */
+
+    private void initialize() {
+        setLayout(null);
+
+        // BUTTONS
+        // ADD BUTTON
+        btnAdd = new JButton("");
+        btnAdd.addActionListener(e -> addButtonAction());
+        btnAdd.setBounds(853, 200, 100, 45);
+        btnAdd.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btnAdd.setContentAreaFilled(false);
+        btnAdd.setBorderPainted(false);
+        btnAdd.setOpaque(false);
+        add(btnAdd);
+
+        // EDIT BUTTON
+        btnEdit = new JButton("");
+        btnEdit.addActionListener(e -> editButtonAction());
+        btnEdit.setBounds(853, 300, 100, 45);
+        btnEdit.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btnEdit.setContentAreaFilled(false);
+        btnEdit.setBorderPainted(false);
+        btnEdit.setOpaque(false);
+        add(btnEdit);
+
+        // BACK BUTTON
+        btnBack = new JButton("");
+        btnBack.addActionListener(e -> backButtonAction());
+        btnBack.setBounds(14, 4, 75, 75);
+        btnBack.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btnBack.setContentAreaFilled(false);
+        btnBack.setBorderPainted(false);
+        btnBack.setOpaque(false);
+        add(btnBack);
+
+        // DELETE BUTTON
+        btnDelete = new JButton("");
+        btnDelete.setBounds(853, 250, 100, 45);
+        btnDelete.addActionListener(e -> deleteButtonAction());
+        btnDelete.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btnDelete.setContentAreaFilled(false);
+        btnDelete.setBorderPainted(false);
+        btnDelete.setOpaque(false);
+        add(btnDelete);
+
+        // JLISTS
+        // JList with scrollPane and get information with click, list for all of the docking stations
+        deList = dsDAO.getAllDockingStations();
+        for (DockingStation ds : deList) {
+            dsListModel.addElement(ds.getStationName());
+        }
+
+        dbJList = new JList(dsListModel);
+        dbJList.setFont(new Font("YuKyokasho Yoko", Font.BOLD, 14));
+        dbJList.setModel(dsListModel);
+        dbJList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        dbJList.setCellRenderer(new TransparentListCellRenderer());
+        dbJList.setOpaque(false);
+        dbJList.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        dbJList.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                stationListClicked(e);
+            }
+        });
+        dbJList.setToolTipText("");
+
+        dbScrollPane = new JScrollPane(dbJList);
+        dbScrollPane.setBounds(638, 58, 213, 420);
+        dbScrollPane.setOpaque(false);
+        dbScrollPane.getViewport().setOpaque(false);
+        dbScrollPane.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        add(dbScrollPane);
+
+        // JList with scrollPane and get information with click, list for all of bikes in a station
+        bikeJList = new JList(bikeListModel);
+        bikeJList.setFont(new Font("YuKyokasho Yoko", Font.ITALIC, 13));
+        bikeJList.setModel(bikeListModel);
+        bikeJList.setCellRenderer(new TransparentListCellRenderer());
+        bikeJList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        bikeJList.setOpaque(false);
+        bikeJList.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        bikeJList.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                bikeListClicked(e);
+            }
+        });
+        bikeJList.setToolTipText("");
+
+        bikeScrollPane = new JScrollPane(bikeJList);
+        bikeScrollPane.setBounds(400, 153, 205, 232);
+        bikeScrollPane.setOpaque(false); // Make the SCrollPane transparent
+        bikeScrollPane.getViewport().setOpaque(false);
+        bikeScrollPane.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        add(bikeScrollPane);
+
+        // INFORMATION LABELS
+        // Label for information of the docking station
+        stationInfo = new JLabel("");
+        stationInfo.setForeground(Color.WHITE);
+        stationInfo.setFont(new Font("YuKyokasho Yoko", Font.PLAIN, 13));
+        stationInfo.setBounds(80, 73, 305, 194);
+        add(stationInfo);
+
+        // MAPS
+        mapPanel = new JPanel(new GridLayout());
+        mapPanel.setBounds(52, 276, 300, 215);
+        mapPanel.setBackground(Color.WHITE);
+        add(mapPanel);
+
+        // BACKGROUND IMAGE
+        ImageIcon background = new ImageIcon(getClass().getResource("/main/resources/com/team15/ebrs/images/DockingStationMainNew.png"));
+        JLabel lblbackground = new JLabel(background);
+        lblbackground.setBounds(-5, -10, 960, 518);
+        add(lblbackground);
+
+        // UPDATE INFO
+        if (deList != null) {
+        	updateInfo("Lade station");
+        }
+    }
+
+    /**
+     * The action to happen when the edit button is clicked
+     */
+    private void editButtonAction() {
+        try {
+            String dsinfo = (String) dbJList.getModel().getElementAt(dbJList.getSelectedIndex());
+            DockingStation seletedstation = dsDAO.getStationByName(dsinfo);
+            String[] types = {"Change Name", "Change Coordinate", "Change Total Docks"};
+            String s = (String) JOptionPane.showInputDialog(null, "Selete the following option:\n", "Edit", JOptionPane.PLAIN_MESSAGE, null, types, "Change name");
+            switch (s) {
+                case "Change Name":
+                    String station_nyname = JOptionPane.showInputDialog(null, "Please enter the new name for " + seletedstation.getStationName() + " :\n", "Change name", JOptionPane.PLAIN_MESSAGE);
+                    if (station_nyname.equals("")) {
+                        JOptionPane.showMessageDialog(null, "The new name cannot be blank");
+                    } else if (dsDAO.findStationByName(station_nyname)) {
+                        JOptionPane.showMessageDialog(null, "This name is already registered, please try another name");
+                    } else {
+                        dsDAO.changeName(seletedstation, station_nyname);
+                        JOptionPane.showMessageDialog(null, "The new name for stationid: " + seletedstation.getStationId() + " is " + station_nyname);
+                    }
+                    break;
+                case "Change Coordinate":
+                    String sCoordinatelat = JOptionPane.showInputDialog(null, "Please enter the new coordinatelat for " + seletedstation.getStationName() + " :\n", "Change Coordinate", JOptionPane.PLAIN_MESSAGE);
+                    String sCoordinatelng = JOptionPane.showInputDialog(null, "Please enter the new coordinatelng for " + seletedstation.getStationName() + " :\n", "Change Coordinate", JOptionPane.PLAIN_MESSAGE);
+                    if (sCoordinatelat.equals("") || sCoordinatelng.equals("")) {
+                        JOptionPane.showMessageDialog(null, "The field cannot be empty");
+                    } else {
+                        try {
+                            double ny_coordinatelat = Double.parseDouble(sCoordinatelat);
+                            double ny_coordinatelng = Double.parseDouble(sCoordinatelng);
+                            dsDAO.changeCoordinate(seletedstation, ny_coordinatelat, ny_coordinatelng);
+                        } catch (Exception el) {
+                            JOptionPane.showMessageDialog(null, "Error, Invalid number");
+                        }
+                    }
+                    break;
+                case "Change Total Docks":
+                    String snytotaldocks = JOptionPane.showInputDialog(null, "Please enter the new total docks for " + seletedstation.getStationName() + " :\n", "Change Total Docks", JOptionPane.PLAIN_MESSAGE);
+                    if (snytotaldocks.equals("")) {
+                        JOptionPane.showMessageDialog(null, "The field cannot be empty");
+                    } else {
+                        try {
+                            int nytotaldocks = Integer.parseInt(snytotaldocks);
+                            if (nytotaldocks >= 0) {
+                                dsDAO.changeAntDocks(seletedstation, nytotaldocks);
+                            } else {
+                                JOptionPane.showMessageDialog(null, "The Number of docks is invalid");
+                            }
+                        } catch (Exception d) {
+                            JOptionPane.showMessageDialog(null, "Error, Invalid number");
+                        }
+                    }
+                    break;
+            }
+
+        } catch (NullPointerException nu) {
+        } catch (ArrayIndexOutOfBoundsException o) {
+            JOptionPane.showMessageDialog(null, "Please choose the station you want to edit");
+
+        }
+    }
+
+
+    /**
+     * The action to happen when the add button is clicked
+     */
+    private void addButtonAction() {
+        AddStationPanel addStationScreen = new AddStationPanel(mainFrame);
+        mainFrame.setContentPane(addStationScreen);
+        mainFrame.revalidate();
+    }
+
+    /**
+     * The action to happen when the back button is clicked
+     */
+    private void backButtonAction() {
+        MainMenuPanel mainMenuScreen = new MainMenuPanel(mainFrame);
+        mainFrame.setContentPane(mainMenuScreen);
+        mainFrame.revalidate();
+    }
+
+    /**
+     * The action to happen when the delete button is clicked
+     */
+    private void deleteButtonAction() {
+        if (dbJList.isSelectionEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please choose the station you want to delete");
+        }//unsuccessful
+        else {
+            String dsinfo = (String) dbJList.getModel().getElementAt(dbJList.getSelectedIndex());
+            DockingStation seletedstation = dsDAO.getStationByName(dsinfo);
+            int n = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete station " + dsinfo + " ?", "Warning", JOptionPane.YES_NO_OPTION);
+            if (n == 0) {
+                dsDAO.deleteDockingStation(seletedstation);
+                dsListModel.removeElementAt(dbJList.getSelectedIndex());
+            }
+        }
+    }
+
+    /**
+     * The event to happen when one of bike on the bike list is selected via mouse clicking
+     *
+     * @param e the event to happen
+     */
+    private void bikeListClicked(MouseEvent e) {
+        if (dbJList.getSelectedIndex() != -1) {
+            if (e.getClickCount() == 2) {
+                String bikeinfo = (String) bikeJList.getModel().getElementAt(bikeJList.locationToIndex(e.getPoint()));
+                String[] bikeid1 = bikeinfo.split(" ");
+                int bikeid2 = Integer.parseInt(bikeid1[1]);
+                BikeInfoPanel bikeInfoScreen = new BikeInfoPanel(bikeid2, mainFrame);
+                mainFrame.setContentPane(bikeInfoScreen);
+                mainFrame.revalidate();
+            }
+            if (e.getClickCount() == 1) {
+
+            }
+        }
+    }
+
+    /**
+     * The event to happen when one of docking station on the station list is selected via mouse clicking
+     *
+     * @param e the event to happen
+     */
+    private void stationListClicked(MouseEvent e) {
+        if (dbJList.getSelectedIndex() != -1) {
+            if (e.getClickCount() == 1) {
+                String dcinfo = (String) dbJList.getModel().getElementAt(dbJList.locationToIndex(e.getPoint()));
+                updateInfo(dcinfo);
+            }
+            if (e.getClickCount() == 1) {
+
+            }
+        }
+    }
+
+    /**
+     * display the information of the docking station on the screen
+     *
+     * @param dcinfo the name of the docking station
+     */
+    private void updateInfo(String dcinfo) {
+        mapPanel.removeAll();
+        bikeListModel.removeAllElements();
+        String informasjon = dsDAO.getInformationByName(dcinfo);
+        DockingStation seleteddockingstation = dsDAO.getStationByName(dcinfo);
+        bikeList = bikeDAO.getAllBikes(seleteddockingstation.getStationId());
+        for (Bike bike : bikeList) {
+            bikeListModel.addElement("id: " + bike.getBikeId() + " - " + bike.getTypeName());
+        }
+        stationInfo.setText(informasjon);
+        JMapViewer mapViewer = Map.getStationMap(seleteddockingstation);
+        mapPanel.add(mapViewer);
+    }
+
+    public class TransparentListCellRenderer extends DefaultListCellRenderer {
+        /**
+         * Return a component that has been configured to display the specified value.
+         *
+         * @param list         The JList we're painting.
+         * @param value        The value returned by list.getModel().getElementAt(index).
+         * @param index        The cells index.
+         * @param isSelected   True if the specified cell was selected.
+         * @param cellHasFocus True if the specified cell has the focus.
+         * @return A component whose paint() method will render the specified value.
+         */
+        @Override
+        public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+
+            /* HEX KODE TO COLOR */
+
+            Color Black = Color.BLACK;
+            /* COLOR OF FONT */
+            setForeground(Black);
+            setOpaque(isSelected);
+            return this;
+        }
+    }
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    MainFrame frame = new MainFrame();
+                    StationPanel stationScreen = new StationPanel(frame);
+                    frame.setContentPane(stationScreen);
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+}
